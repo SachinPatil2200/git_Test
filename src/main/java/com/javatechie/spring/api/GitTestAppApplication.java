@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GitTestAppApplication {
 
-	@PostMapping("/purchase/{uName}/{productName}/{amount}")
-	public String purchase(@PathVariable String uName ,@PathVariable String productName,@PathVariable String amount) {
-		return "Hi " + uName + " order for " + productName + " with amount "
-				+ amount + " stored successfully...";
+	@PostMapping("/purchase")
+	public String purchase(@RequestBody Order order) {
+		return "Hi " + order.getUName() + " order for " + order.getProductName() + " with amount "
+				+ order.getAmmount() + " stored successfully...";
 	}
 
 	public static void main(String[] args) {
