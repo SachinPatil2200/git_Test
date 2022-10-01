@@ -6,6 +6,6 @@ import lombok.Data;
 public class Order {
 	String uName;
 	String productName;
-	String ammount;
+	double ammount;
 
 }
