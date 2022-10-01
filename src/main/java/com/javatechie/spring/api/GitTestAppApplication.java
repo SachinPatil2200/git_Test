@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GitTestAppApplication {
 
-	@PostMapping("/purchase/{}/{}/{}")
+	@PostMapping("/purchase/{uName}/{productName}/{amount}")
 	public String purchase(@PathVariable String uName ,@PathVariable String productName,@PathVariable String amount) {
 		return "Hi " + uName + " order for " + productName + " with amount "
 				+ amount + " stored successfully...";
